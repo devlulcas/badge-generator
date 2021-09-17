@@ -3,3 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --dark: #00303b;
+  --light: #f1f2da;
+  --red: #ff7777;
+  --yellow: #ffce96;
+}
