@@ -61,3 +61,32 @@ const image = {
   labelColor: "00303b",
   messageColor: "ffce96",
 };
+
+// Utilizando o pattern: Observer
+class Observable {
+  // O construtor cria um array vazio de observadores
+  // observadores são objetos/elementos do dom que irão realizar algo
+  // quando forem notificados
+  constructor() {
+    this.observers = [];
+  }
+
+  // A função subscribe recebe um objeto e a adiciona na lista de observers
+  subscribe(obj) {
+    this.observers.push(obj);
+  }
+
+  // A função unsubscribe gera um array com todos os objetos que não são o que foi
+  // passado como argumento
+  unsubscribe(obj) {
+    this.observers = this.observers.filter((subscriber) => subscriber !== obj);
+  }
+
+  // A função notify é chamada por um evento e passa o argumento recebido como argumento
+  // para todos os outros objetos na lista de observers
+  notify(data) {
+    this.observers.forEach((observer) => observer(data));
+  }
+}
+
+const observer = new Observable();
