@@ -90,3 +90,40 @@ body {
   justify-content: center;
   background: var(--red);
 }
+
+/*COLOR PICKER*/
+.pcr-button,
+.pcr-button::after,
+.pcr-button::before {
+  width: 25vw !important;
+  height: 100% !important;
+}
+
+.pcr-app {
+  width: 25vw !important;
+  font-size: 2rem;
+  background: var(--red) !important;
+  border: 0.4rem solid var(--light) !important;
+  border-radius: 2rem !important;
+}
+
+.pcr-palette,
+.pcr-color-palette,
+.pcr-palette::before {
+  border-radius: 1.6rem 1.6rem 0 0 !important;
+}
+
+.pcr-interaction {
+  background: var(--yellow) !important;
+  border-radius: 2rem !important;
+  border: 0.4rem solid var(--light) !important;
+}
+
+.pcr-type,
+.pcr-save {
+  background: var(--dark) !important;
+}
+
+.pcr-clear {
+  background: var(--red) !important;
+}
