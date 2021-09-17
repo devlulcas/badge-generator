@@ -90,3 +90,44 @@ class Observable {
 }
 
 const observer = new Observable();
+
+//EVENTS - COLOR PICKERS
+logoColorPicker.on("save", (color, source, instance) => {
+  const hexaValue = color.toHEXA().toString().replace("#", "");
+  image.logoColor = hexaValue;
+  observer.notify(image);
+});
+
+messageColorPicker.on("save", (color, source, instance) => {
+  const hexaValue = color.toHEXA().toString().replace("#", "");
+  image.messageColor = hexaValue;
+  observer.notify(image);
+});
+
+labelColorPicker.on("save", (color, source, instance) => {
+  const hexaValue = color.toHEXA().toString().replace("#", "");
+  image.labelColor = hexaValue;
+  observer.notify(image);
+});
+
+//EVENTS - TEXT PICKERS
+logoInput.addEventListener("change", () => {
+  const tech = logoInput.value;
+  image.tech = tech;
+  observer.notify(image);
+});
+
+messageInput.addEventListener("change", () => {
+  const message = messageInput.value;
+  image.message = message;
+  observer.notify(image);
+});
+
+labelInput.addEventListener("change", () => {
+  const label = labelInput.value;
+  image.label = label;
+  observer.notify(image);
+});
+
+// Carrega a imagem a partir do objeto existente 
+window.onload = () => observer.notify(image);
