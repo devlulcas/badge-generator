@@ -39,3 +39,25 @@ function colorPickerConfig(elementId) {
     },
   };
 }
+
+// Um objeto padrão de uma badge imutável
+const defaultImage = {
+  tech: "javascript",
+  label: "js",
+  message: "javascript",
+  logoColor: "f1f2da",
+  labelColor: "00303b",
+  messageColor: "ffce96",
+};
+Object.freeze(defaultImage);
+
+// O objeto image deve ser identico ao objeto defaultImage
+// sua única diferença é a mutabilidade
+const image = {
+  tech: "javascript",
+  label: "js",
+  message: "javascript",
+  logoColor: "f1f2da",
+  labelColor: "00303b",
+  messageColor: "ffce96",
+};
