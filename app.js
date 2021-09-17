@@ -132,6 +132,14 @@ labelInput.addEventListener("change", () => {
 // Carrega a imagem a partir do objeto existente 
 window.onload = () => observer.notify(image);
 
+function showImage(url, imageElement) {
+  imageElement.src = url;
+}
+
+function showUrl(url, spanElement) {
+  spanElement.textContent = url;
+}
+
 // Recebe um objeto e desmembra ele para que seja possível utilizar
 // as props como parâmetros
 function generateImageUrl({
