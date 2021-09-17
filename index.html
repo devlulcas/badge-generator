@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,15 +21,63 @@
 
   <title>Badges for your github project</title>
 </head>
+
 <body>
-  <!--Select a tech-->
-  <!--Select a message-->
-  <!--Select a label-->
-  <!--Select a label color-->
-  <!--Select a message color-->
-  <!--Select a tech color-->
   <div class="content">
-    
+    <form action="post" class="form">
+      <div class="field">
+        <label for="label" class="field__label">
+          Label
+          <span class="field__label__indicator">&gt</span>
+        </label>
+        <input type="text" class="field__input" id="label">
+      </div>
+      <div class="field">
+        <label for="label--color" class="field__label">Label color</label>
+        <input type="color" class="field__input field__input--color" id="label--color">
+      </div>
+
+      <div class="field">
+        <label for="message" class="field__label">
+          Message
+          <span class="field__label__indicator">&gt</span>
+        </label>
+        <input type="text" class="field__input" id="message">
+      </div>
+      <div class="field">
+        <label for="message--color" class="field__label">Label color</label>
+        <input type="color" class="field__input field__input--color" id="message--color">
+      </div>
+
+      <div class="field">
+        <label for="logo" class="field__label">
+          Tech
+          <span class="field__label__indicator">&gt</span>
+        </label>
+        <input type="text" class="field__input" id="logo">
+      </div>
+      <div class="field">
+        <label for="logo--color" class="field__label">Tech logo color</label>
+        <div class="field__input field__input--color" id="logo--color">
+        </div>
+      </div>
+    </form>
+
+    <div class="preview">
+      <img class="preview__img"
+        src="https://img.shields.io/static/v1?label=ES6&labelColor=f0f6f0&message=JS&color=F7DF1E&style=for-the-badge&logo=javascript"
+        alt="badge">
+    </div>
+
+    <section class="final">
+      <button class="final__copy">Copy</button>
+      <span class="final__url">
+        https://img.shields.io/static/v1?label=ES6&labelColor=f0f6f0&message=JS&color=F7DF1E&style=for-the-badge&logo=javascript
+      </span>
+    </section>
+
   </div>
+  <script src="./app.js" type="module"></script>
 </body>
+
 </html>
