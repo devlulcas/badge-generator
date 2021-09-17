@@ -132,6 +132,17 @@ labelInput.addEventListener("change", () => {
 // Carrega a imagem a partir do objeto existente 
 window.onload = () => observer.notify(image);
 
+// Cadastro de objetos
+observer.subscribe(displayResult);
+
+// Função passada como observer principal
+// ao ser chamada gera a url e chama as funções que alteram o dom
+function displayResult(imageObject) {
+  const url = generateImageUrl(imageObject);
+  showImage(url, imagePreview);
+  showUrl(url, spanUrl);
+}
+
 function showImage(url, imageElement) {
   imageElement.src = url;
 }
