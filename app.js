@@ -131,3 +131,21 @@ labelInput.addEventListener("change", () => {
 
 // Carrega a imagem a partir do objeto existente 
 window.onload = () => observer.notify(image);
+
+// Recebe um objeto e desmembra ele para que seja possível utilizar
+// as props como parâmetros
+function generateImageUrl({
+  tech,
+  label,
+  message,
+  logoColor,
+  labelColor,
+  messageColor,
+}) {
+  if (image !== defaultImage) {
+    const baseUrl = "https://img.shields.io/static/v1?";
+    const params = `label=${label}&labelColor=${labelColor}&message=${message}&color=${messageColor}&logo=${tech}&logoColor=${logoColor}&style=for-the-badge`;
+    const finalUrl = `${baseUrl}${params}`;
+    return finalUrl;
+  }
+}
