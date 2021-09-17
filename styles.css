@@ -16,6 +16,10 @@ body {
   height: 100vh;
   width: 100vw;
   background: var(--dark);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .content {
