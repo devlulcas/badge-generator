@@ -21,6 +21,7 @@ const messageInput = document.querySelector("#message");
 // Seleciona elementos de visualização
 const imagePreview = document.querySelector("#preview__img");
 const anchorUrl = document.querySelector("#final__url");
+const btnCopy = document.querySelector("#final__btncopy");
 
 // Gera um objeto com basicamente a mesma config, se diferenciando apenas no id
 function colorPickerConfig(elementId) {
@@ -129,7 +130,7 @@ labelInput.addEventListener("change", () => {
   observer.notify(image);
 });
 
-// Carrega a imagem a partir do objeto existente 
+// Carrega a imagem a partir do objeto existente
 window.onload = () => observer.notify(image);
 
 // Cadastro de objetos
@@ -166,5 +167,19 @@ function generateImageUrl({
     const params = `label=${label}&labelColor=${labelColor}&message=${message}&color=${messageColor}&logo=${tech}&logoColor=${logoColor}&style=for-the-badge`;
     const finalUrl = `${baseUrl}${params}`;
     return finalUrl;
+  }
+}
+
+btnCopy.onclick = () => copyText(anchorUrl);
+
+function copyText(anchorElement) {
+  const url = anchorElement.href;
+  try {
+    anchorElement.select();
+    anchorElement.selectionRange(0, 99999);
+    navigator.clipboard.writeText(url);
+  } catch (err) {
+    navigator.clipboard.writeText(url);
+    console.log(err);
   }
 }
