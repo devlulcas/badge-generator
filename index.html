@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!--Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
- 
+
   <!--CSS-->
   <link rel="stylesheet" href="styles.css">
-  
+
   <!--Color picker-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr@1.8.0/dist/pickr.min.js"></script>
@@ -33,7 +33,7 @@
         <input type="text" class="field__input" id="label">
       </div>
       <div class="field">
-        <label for="label--color" class="field__label">Label color</label>
+        <label for="label--color" class="field__label field__label--color">Label color</label>
         <input type="color" class="field__input field__input--color" id="label--color">
       </div>
 
@@ -45,7 +45,7 @@
         <input type="text" class="field__input" id="message">
       </div>
       <div class="field">
-        <label for="message--color" class="field__label">Label color</label>
+        <label for="message--color" class="field__label field__label--color">Message color</label>
         <input type="color" class="field__input field__input--color" id="message--color">
       </div>
 
@@ -57,23 +57,20 @@
         <input type="text" class="field__input" id="logo">
       </div>
       <div class="field">
-        <label for="logo--color" class="field__label">Tech logo color</label>
-        <div class="field__input field__input--color" id="logo--color">
-        </div>
+        <label for="logo--color" class="field__label field__label--color">Tech logo color</label>
+        <input type="color" class="field__input field__input--color" id="logo--color">
       </div>
     </form>
 
     <div class="preview">
-      <img class="preview__img" id="preview__img"
-        src=""
-        alt="badge">
+      <img class="preview__img" id="preview__img" src="" alt="badge">
     </div>
 
     <section class="final">
-      <button class="final__copy">Copy</button>
-      <span class="final__url" id="final__url">
-        Made with love by: devlulcas
-      </span>
+      <button class="final__btncopy">Copy</button>
+      <a href="" target="_blank" class="final__url" id="final__url">
+        Image url here
+      </a>
     </section>
 
   </div>
