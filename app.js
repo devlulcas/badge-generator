@@ -20,7 +20,7 @@ const messageInput = document.querySelector("#message");
 
 // Seleciona elementos de visualização
 const imagePreview = document.querySelector("#preview__img");
-const spanUrl = document.querySelector("#final__url");
+const anchorUrl = document.querySelector("#final__url");
 
 // Gera um objeto com basicamente a mesma config, se diferenciando apenas no id
 function colorPickerConfig(elementId) {
@@ -140,15 +140,15 @@ observer.subscribe(displayResult);
 function displayResult(imageObject) {
   const url = generateImageUrl(imageObject);
   showImage(url, imagePreview);
-  showUrl(url, spanUrl);
+  showUrl(url, anchorUrl);
 }
 
 function showImage(url, imageElement) {
   imageElement.src = url;
 }
 
-function showUrl(url, spanElement) {
-  spanElement.textContent = url;
+function showUrl(url, anchorElement) {
+  anchorElement.href = url;
 }
 
 // Recebe um objeto e desmembra ele para que seja possível utilizar
