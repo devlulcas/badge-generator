@@ -42,6 +42,14 @@ body {
   justify-content: space-between;
 }
 
+.field:hover {
+  border-color: var(--light);
+}
+
+.field:hover .field__label__indicator {
+  color: var(--yellow);
+}
+
 .field {
   background: var(--red);
   display: flex;
@@ -116,7 +124,22 @@ body {
   height: 100%;
   width: 15%;
   font-family: "Press Start 2P", cursive;
+  background: var(--light);
   padding: 1rem;
+  transition: 100ms;
+}
+
+.final__btncopy:hover,
+.final__url:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.final__btncopy:active,
+.final__url:active {
+  background: var(--dark);
+  border-color: var(--light);
+  color: var(--light);
 }
 
 .final__url {
@@ -134,7 +157,7 @@ body {
   word-break: break-all;
 }
 
-@media screen and (max-width:80rem){
+@media screen and (max-width: 80rem) {
   .content {
     width: 90vw;
   }
