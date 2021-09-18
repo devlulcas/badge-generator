@@ -76,6 +76,7 @@ body {
   padding-right: 1rem;
   font-family: "Press Start 2P", cursive;
   color: var(--light);
+  padding-left: 1rem;
 }
 
 .field__input--color {
